@@ -8,7 +8,8 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/finanzmanager', {
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/finanzmanager';
+mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
