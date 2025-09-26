@@ -16,6 +16,6 @@
   "devDependencies": {
     "concurrently": "^5.3.0"
   },
-  "author": "IHR NAME",
+  "author": "John Doe",
   "license": "MIT"
 }
