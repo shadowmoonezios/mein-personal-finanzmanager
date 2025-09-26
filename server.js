@@ -16,12 +16,12 @@ mongoose.connect(mongoURI, {
 
 const db = mongoose.connection;
 
-db.on('error', console.error.bind(console, 'MongoDB Verbindungsfehler:'));
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 db.once('open', () => {
-  console.log('Datenbank verbunden');
+  console.log('Database connected');
 });
 
 app.listen(port, () => {
-  console.log(`Server läuft auf Port: ${port}`);
+  console.log(`Server running on port: ${port}`);
 });
